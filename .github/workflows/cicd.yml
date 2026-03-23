@@ -30,6 +30,7 @@ jobs:
           docker build -t $IMAGE:${{ github.sha }} .
           docker push $IMAGE:${{ github.sha }}
 
+
   deploy:
     needs: build-push
     runs-on: self-hosted
